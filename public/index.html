@@ -12,9 +12,16 @@
 	<link rel='stylesheet' href='/dvd-logo/build/bundle.css'>
 
 	<script defer src='/dvd-logo/build/bundle.js'></script>
+
+	<link rel="manifest" href="manifest.json">
 </head>
 
 <body>
+	<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/dvd-logo/service-worker.js')
+		}
+	</script>
 </body>
 
 </html>
